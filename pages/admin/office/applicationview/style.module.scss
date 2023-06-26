@@ -1,0 +1,41 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    // background-color: red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: normal;
+    align-items: normal;
+    align-content: normal;
+    padding: 40px;
+}
+
+.personal{
+    // width: 400px;
+    height: 25vh;
+}
+.address{
+    width: 40vw;
+}
+.application{
+    width: 40vw;
+}
+.dynamicContainer{
+    display: flex;
+    gap: 40px;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: space-around;
+    // align-items: normal;
+    // align-content: normal;
+}
+.subject{
+    width:400px;
+}
+.file{
+    width:400px;
+}
+.qualification{
+    width:600px;
+}

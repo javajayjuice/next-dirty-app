@@ -1,0 +1,24 @@
+
+.sectionMain {
+  height: 720px;
+  display: flex;
+  justify-content: space-between;
+}
+.sectionA {
+  background-color: blue;
+  width: 500px;
+}
+.sectionB {
+  background-color: red;
+  width: 1000px;
+}
+
+.input {
+  border: none;
+  height: 50px;
+  border-radius: 25px;
+  margin: 10px 0;
+}
+.input::placeholder{
+    color: grey;
+  }

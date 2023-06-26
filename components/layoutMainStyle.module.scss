@@ -1,0 +1,43 @@
+.headerStyle {
+  text-align: center;
+  color: #fff;
+  height: 64px;
+  padding-inline: 50px;
+  line-height: 64px;
+  background-color: #7dbcea;
+  width: 100%;
+}
+
+.contentStyle {
+  text-align: center;
+  min-height: 120px;
+  line-height: 120px;
+  color: #fff;
+  background-color: #108ee9;
+  width: 100%;
+  width: 100vw;
+  min-height: 100vh;
+}
+// .spaceStyle{
+//   width: 100vw;
+//
+// }
+.sider {
+  // background-color: #fff;
+  // width: 500px;
+  // height: 500px;
+}
+.path {
+  position: absolute;
+  width: 20vw;
+  height: 83.2vh;
+  margin-left: 40vw;
+  background-color: #f1c50e;
+  // clip-path: polygon(50% 0%, 80% 0%, 80% 85%, 50% 85%);
+}
+
+.content {
+  margin: 10px 16px;
+  padding: 20px 50px;
+  background-color: #e6e6e6;
+}

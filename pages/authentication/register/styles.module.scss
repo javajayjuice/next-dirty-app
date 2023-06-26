@@ -1,0 +1,60 @@
+.sectionMain{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: normal;
+  align-content: normal;
+  padding: 24px;
+  background: #f5f5f5;
+  min-height: 86.5vh;
+  width: 100%;
+}
+.colorContainer{
+  
+}
+.form{
+  // margin-right: 29px;
+}
+.head{
+  padding-left: 25px;
+}
+.sectionA{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  align-items: normal;
+  align-content: normal;
+  padding: 20px;
+}
+
+.part1, .part2, .part3{
+  width: 30vw;
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  // margin: 10px;
+  padding: 0 20px;
+}
+.regContainer{
+  // margin: 50px;
+  background-color: white;
+  z-index: 1;
+}
+.btnGroup{
+  margin-right: 20px;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.path{
+  position: absolute;
+  // clip-path: polygon(0 43%, 77% 42%, 78% 100%, 0% 100%);  background-color: red;
+  width: 500px;
+  height: 500px;
+  background-color: #f5d655;
+  bottom: 10px;
+  left: 20px;
+  z-index: 0;
+}

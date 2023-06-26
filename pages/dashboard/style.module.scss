@@ -1,0 +1,49 @@
+.sectionA {
+  width: 600px;
+  z-index: 1;
+  padding: 40px 20px;
+  text-transform: uppercase;
+  line-height: 2;
+}
+.sectionB {
+  text-transform: uppercase;
+  display: flex;
+  background-color: grey;
+  opacity: 1;
+  width: 100%;
+  z-index: 2;
+}
+.sectionMain {
+  height: 720px;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+.btnGroup {
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+.head {
+  margin-bottom: 10px;
+}
+.info{
+  position: absolute;
+  top: 50%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  height: 50vh;
+  background-color: red;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 40px;
+  color: #f1c50e;
+}
+.olTag{
+  padding: 10px;
+  font-size: 16px;
+}

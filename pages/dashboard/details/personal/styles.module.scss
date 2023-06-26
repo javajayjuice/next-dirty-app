@@ -1,0 +1,51 @@
+.sectionMain{
+  // background-color: #f5d654;
+  // min-height: 94vh;
+  position: relative;
+}
+.colorContainer{
+  
+}
+.form{
+  // margin-right: 29px;
+}
+.head{
+  padding-left: 25px;
+}
+.warnText{
+  padding-left: 25px;
+  margin-bottom: 20px;
+  color: red;
+}
+.sectionA{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: normal;
+  align-items: normal;
+  align-content: normal;
+  padding: 20px;
+}
+
+.part1, .part2, .part3{
+  width: 27vw;
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  // margin: 10px;
+  padding: 0 20px;
+}
+.regContainer{
+  // margin: 50px;
+  background-color: white;
+  z-index: 1;
+}
+.btnGroup{
+  margin-right: 20px;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.btnUpdate{
+  margin: 20px ;
+}

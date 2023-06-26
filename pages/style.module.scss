@@ -1,0 +1,184 @@
+// @import url("https://fonts.googleapis.com/css2?family=Ovo&display=swap");
+
+.svg {
+  font-family: "Ovo", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+.svg .text {
+  animation: stroke 5s infinite alternate;
+  stroke-width: 2;
+  stroke: #365fa0;
+  font-size: 50px;
+}
+@keyframes stroke {
+  0% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: rgba(54, 95, 160, 1);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: rgba(54, 95, 160, 1);
+  }
+  80% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: rgba(54, 95, 160, 1);
+    stroke-width: 3;
+  }
+  100% {
+    fill: rgba(72, 138, 204, 1);
+    stroke: rgba(54, 95, 160, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
+
+.wrapper {
+  background-color: red;
+}
+
+.sectionMain {
+  //   height: 95vh;
+  background-color: #f5d654;
+  min-height: 94vh;
+  position: relative;
+}
+
+.sectionA {
+  position: absolute;
+  bottom: 30%;
+  right: 40%;
+  width: 40vw;
+  height: 50vh;
+  animation: slide-in-left 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.sectionB {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 30vw;
+  height: 50vh;
+  background-color: white;
+  animation: slide-in-right 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.path {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #f1c50e;
+  clip-path: polygon(40% 0%, 65% 0%, 65% 85%, 40% 85%);
+  animation: slide-in-fwd-center 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: normal;
+  align-content: normal;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+}
+
+.title,
+.text,
+.button {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  background-color: white;
+}
+.title {
+  font-size: 50px;
+}
+.text {
+  font-size: 20px;
+}
+.button {
+}
+.btnHomeLogin {
+  width: 200px;
+  height: 70px;
+  font-size: 30px;
+}
+
+.warn {
+  position: absolute;
+  display: flex;
+  top: 20vh;
+  right: 13vw;
+  width: 200px;
+  height: 200px;
+  background-color: #fff566;
+  padding: 20px;
+  line-height: 20px;
+  align-items: center;
+  text-align: center;
+  animation: slide-in-right 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.info {
+  position: absolute;
+  display: flex;
+  top: 62vh;
+  right: 66vw;
+  width: 500px;
+  height: 200px;
+  border: solid 1px #fff566;
+  background-color: #f5d654;
+  padding: 20px;
+  text-align: left;
+  align-items: center;
+  color: white;
+  animation: slide-in-left 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  color: black;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-fwd-center {
+  0% {
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+// animation: slide-in-fwd-center 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+// animation: slide-in-right 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+// animation: slide-in-left 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;

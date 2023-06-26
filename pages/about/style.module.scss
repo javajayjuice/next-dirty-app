@@ -1,0 +1,27 @@
+.container{
+    position: relative;
+    height: 75vh;
+    // background-color: red;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+}
+.lowSection, .midSection, .upSection{
+max-width: 1200px;
+// background-color: purple;
+height: 50px;
+margin: 10px;
+width: 100%;
+}
+.upSection h1{
+font-size: 2.5rem;
+}
+.midSection{
+    padding-top: 50px;
+    padding-right: 180px;
+}
+.midSection p{
+    font-size: 1rem;
+}
