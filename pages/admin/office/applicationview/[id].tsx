@@ -5,19 +5,22 @@ import { useApplication } from '../../../../providers/application'
 import style from './style.module.scss';
 import { Button, Checkbox, Descriptions, Form, Input, Select, Space, Table, Tag } from 'antd';
 import api from '../../../api';
+import { ApplicationStatusDto } from '../../../../interfaces';
 
 const Index = () => {
     const router = useRouter()
     const { } = useUser()
-    const { applicationSelected, getApplication } = useApplication()
+    const { applicationSelected, getApplication, createStatus } = useApplication()
 
     useEffect(() => {
         const { id } = router.query
         getApplication(id)
     }, [])
 
-    const onFinish = (values: any) => {
-        console.log('Success:', values);
+    const onFinish = (values: ApplicationStatusDto) => {
+        const { id } = router.query
+        values.applicationId= id;
+        createStatus(values)
     };
 
     const onFinishFailed = (errorInfo: any) => {
@@ -146,7 +149,7 @@ const Index = () => {
                             onFinishFailed={onFinishFailed}
                             autoComplete="off"
                         >
-                            <Form.Item label="Update Status">
+                            <Form.Item name={'status'} label="Update Status" >
                                 <Select>
                                     <Select.Option value={1}>Pending</Select.Option>
                                     <Select.Option value={2}>Rejected</Select.Option>
@@ -154,7 +157,7 @@ const Index = () => {
                                 </Select>
                             </Form.Item>
                             <Form.Item label="Reason">
-                                <Input />
+                                <Input name='reason' />
                             </Form.Item>
 
                             <Form.Item wrapperCol={{ offset: 16, span: 16 }}>

@@ -1,7 +1,6 @@
 import { ApplicationActionEnum } from "../../enums";
 import { IApplicationStateContext } from "./context";
 
-//update state for each action and destructure and spread
 export function ApplicationReducer(
   state: IApplicationStateContext,
   action: ReduxActions.Action<IApplicationStateContext>
@@ -10,6 +9,11 @@ export function ApplicationReducer(
 
   switch (type) {
     case ApplicationActionEnum.createApplicationRequest:
+      return {
+        ...state,
+        ...payload,
+      };
+    case ApplicationActionEnum.createStatusRequest:
       return {
         ...state,
         ...payload,
@@ -27,14 +31,9 @@ export function ApplicationReducer(
       };
 
     case ApplicationActionEnum.updateApplicationRequest:
-      const updatedApplication = payload.applicationUpdated;
-      console.log("action updateApplication::", updatedApplication);
-      const updateApplications = state.applicationsList.filter(
-        (application) => application.id === updatedApplication.id
-      );
       return {
         ...state,
-        applicationsList: [...updateApplications, updatedApplication],
+        ...payload,
       };
 
     case ApplicationActionEnum.deleteApplicationRequest:

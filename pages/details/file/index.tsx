@@ -116,15 +116,11 @@ const Hydrated: FC<any> = () => {
       url: string;
     }
     const handleSave = () => {
-      // Create FormData object
       const formData = new FormData();
       formData.append('File', selectedFile);
 
-      // Send the file to the backend API
       api.post('https://localhost:44311/api/services/app/StoredFile/UploadFile', formData)
         .then(response => {
-          // Handle the response from the backend if needed
-          console.log('File uploaded successfully', response.data.result);
           message.success('File uploaded successfully')
           const newFile = response.data.result
           const addFile: any = {
@@ -132,16 +128,12 @@ const Hydrated: FC<any> = () => {
             name: newFile.name,
             url: newFile.id
           }
-
+          window.location.replace('/details/file')
           file.push(addFile)
-          
-          console.log('new file:::', newFile)
 
           const spreadFile = [...file, ...addFile]
 
           setFile(spreadFile)
-          // console.log('update:::', updateTable)
-          console.log('file::::', spreadFile)
         })
         .catch(error => {
           // Handle the error if the upload fails

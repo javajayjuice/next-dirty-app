@@ -185,27 +185,6 @@ const Hydrated: FC<any> = () => {
             {
                 title: 'operation',
                 dataIndex: 'operation',
-                render: (_: any, record: Item) => {
-                    const editable = isEditing(record);
-                    return editable ? (
-                        <span>
-                            <Typography.Link onClick={() => save(record.key)} style={{ marginRight: 8 }}>
-                                Save
-                            </Typography.Link>
-                            <Popconfirm title="Sure to cancel?" onConfirm={cancel}>
-                                <a>Cancel</a>
-                            </Popconfirm>
-                        </span>
-                    ) : (
-                        <Typography.Link disabled={editingKey !== ''} onClick={() => edit(record)}>
-                            Edit
-                        </Typography.Link>
-                    );
-                },
-            },
-            {
-                title: 'operation',
-                dataIndex: 'operation',
                 render: (_, record) =>
                 qualificationFetched.length >= 1 ? (
                         <Popconfirm title="Sure to delete?" onConfirm={() => handleDelete(record.id)}>

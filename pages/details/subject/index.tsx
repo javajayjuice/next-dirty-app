@@ -241,12 +241,6 @@ const Hydrated: FC<any> = () => {
                                 >
                                     Submit
                                 </Button>
-                                <Button
-                                    type="default" className={style.btnUpdate}
-                                    href='/authentication/register'
-                                >
-                                    Update
-                                </Button>
                             </Form.Item>
                         </Form>
                     </div>

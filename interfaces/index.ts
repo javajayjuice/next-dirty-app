@@ -76,7 +76,7 @@ export interface ApplicationOutputDto {
 
 export interface ApplicationStatusDto {
   id?: string;
-  applicationId: string;
+  applicationId?: any;
   status: ReflistStatus;
   reason: string;
 }

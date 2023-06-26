@@ -34,7 +34,7 @@ const UserProvider = ({ children }) => {
           if (info.address == null) {
             router.push('/details/address')
           }  else {
-            router.push('/dashboard')
+            router.push('/details/address')
           }
         }
       });

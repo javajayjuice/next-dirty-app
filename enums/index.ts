@@ -148,6 +148,7 @@ export enum ApplicantSubjectActionEnum {
 
 export enum ApplicationActionEnum {
   createApplicationRequest = 'CREATE_APPLICATION_REQUEST',
+  createStatusRequest = 'CREATE_STATUS_REQUEST',
  listApplicationsRequest = 'LIST_APPLICATIONS_REQUEST',
   updateApplicationRequest = 'UPDATE_APPLICATION_REQUEST',
   deleteApplicationRequest = 'DELETE_APPLICATION_REQUEST',

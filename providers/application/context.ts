@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { ApplicationInputDto, ApplicationOutputDto } from "../../interfaces";
+import { ApplicationInputDto, ApplicationOutputDto, ApplicationStatusDto } from "../../interfaces";
 
 //dto
 
@@ -14,11 +14,13 @@ export interface IApplicationStateContext {
   readonly applicationDeleted?: string;
   readonly applicationSelected?: ApplicationOutputDto;
   readonly applicationsTotalCount?: number;
+  readonly applicationStatus?: ApplicationStatusDto;
 }
 
 //specifying the action ===== things that I'll be passing through the action aka API
 export interface IApplicationActionContext {
   createApplication?: (payload: ApplicationInputDto) => void;
+  createStatus?: (payload: ApplicationStatusDto) => void;
   listApplications?: () => void;
   getApplicationsTotalCount?: () => void;
   updateApplication?: (payload: ApplicationInputDto) => void;

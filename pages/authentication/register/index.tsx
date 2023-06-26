@@ -102,7 +102,6 @@ const Hydrated: FC<any> = () => {
         };
     
         const validatePhoneNumber = (_: any, value: string) => {
-            // Regular expression pattern for phone number validation
             const phoneNumberPattern = /^\d{10}$/;
     
             if (!phoneNumberPattern.test(value)) {
@@ -145,14 +144,6 @@ const Hydrated: FC<any> = () => {
                                     >
                                         <Input placeholder="Surname" className={`${style.input} input`} />
                                     </Form.Item>
-    
-                                    {/* <Form.Item
-                                        name="username"
-                                        rules={[{ required: true, message: "Please input your username!" }]}
-                                          
-                                    >
-                                        <Input placeholder="Username" className={`${style.input} input`} />
-                                    </Form.Item> */}
     
                                     <Form.Item
                                         name="emailAddress"

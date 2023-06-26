@@ -5,7 +5,7 @@ import { message } from 'antd';
 import { createApplicationRequestAction, deleteApplicationRequestAction, listApplicationsRequestAction, getApplicationRequestAction, getApplicationsTotalCountRequestAction,  selectApplicationRequestAction, updateApplicationRequestAction } from './actions';
 import { useGet } from 'restful-react';
 import api from '../../pages/api';
-import { ApplicationInputDto } from '../../interfaces';
+import { ApplicationInputDto, ApplicationStatusDto } from '../../interfaces';
 
 // Define the provider and the endpoint functionality
 const ApplicationProvider: FC<PropsWithChildren<{}>> = ({ children }) => {
@@ -19,6 +19,21 @@ const ApplicationProvider: FC<PropsWithChildren<{}>> = ({ children }) => {
     const createApplication = async (application: ApplicationInputDto) => {
         try {
             const response = await api.post(`services/app/Application/Create`, application);
+            if (response.status === 200) {
+                const data = response.data;
+                dispatch(createApplicationRequestAction(data.result));
+                message.success("Application created successfully");
+            } else {
+                console.log('response::', response);
+                message.error(response.data.error.message);
+            }
+        } catch (error) {
+            console.log('catch::', error.message);
+        }
+    };
+    const createStatus = async (application: ApplicationStatusDto) => {
+        try {
+            const response = await api.post(`services/app/ApplicationStatus/Create`, application);
             if (response.status === 200) {
                 const data = response.data;
                 dispatch(createApplicationRequestAction(data.result));
@@ -135,7 +150,7 @@ const ApplicationProvider: FC<PropsWithChildren<{}>> = ({ children }) => {
     // Creating a provider component
     return (
         <ApplicationStateContext.Provider value={state}>
-            <ApplicationActionContext.Provider value={{ createApplication, deleteApplication, getApplication, getApplicationsTotalCount, listApplications, updateApplication }}>
+            <ApplicationActionContext.Provider value={{ createApplication, deleteApplication, getApplication, getApplicationsTotalCount, listApplications, updateApplication, createStatus }}>
                 {children}
             </ApplicationActionContext.Provider>
         </ApplicationStateContext.Provider>
